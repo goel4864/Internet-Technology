@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Image Zoom</title>
+	<style type="text/css">
+	div{
+		border: 2px solid black;
+		padding: 10px;
+	}	
+	p{
+		text-align:center;
+	}
+	img{
+		padding-left: 500px;
+	}
+	</style>
+</head>
+<body>
+	<div>
+	<p>Move over the image to zoom in and out of the Image to zoom out</p>
+	<img src="me.jpg"  id="img" >	
+	</div>
+	<script type="text/javascript">
+		var image=document.getElementById('img');
+		image.onmouseover=function(){
+			image.style.height="400px";
+			image.style.width="350px";
+		}
+		image.onmouseout=function(){
+			image.style.height="200px";
+			image.style.width="150px";
+		}
+	</script>
+</body>
+</html>

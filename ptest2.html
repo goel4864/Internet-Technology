@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT PRACTICAL-6</title>
+  <style type="text/css">
+	
+	input{
+	text-align: center;
+	width: 200px;
+	padding-left: 20px;
+	}
+	#submit{
+	text-align: center;
+	}
+	marquee{ color:red;
+	background-color:white;
+	width:500px;
+	text-align:center;
+	font-size:30px;}
+	label{
+	color:black;
+	text-align:center;
+	}
+	body{background-color:black;}
+	#a{
+	width:500px;
+	height:500px;
+	background-color:pink;
+	padding-top:20px;
+	}
+	img{
+	padding-left: 130px;}
+	  </style>
+</head>
+<body>
+    <marquee align="center" >STUDENT FORM</marquee>
+    	<table id="a">
+				<tr><td><img src="me.jpg" width="200px" height="250px"></img>
+	</td></tr>
+					<tr>
+						<td><label for=" name"> NAME</label></td>
+						<td><input type="text" id="name" name="name" ></td>
+					</tr>
+					<tr>
+						<td><label for="rno">ROLL NO</label></td>
+						<td><input type="number" id="rno" name="rno"></td>
+					</tr>
+					<tr>
+						<td><label for="address" >ADDRESS</label></td>
+						<td><input type="text" id="address" name=address></td>
+						<td></td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr>
+					<td>
+					<button type="submit" onclick="abc()" id="submit">SUBMIT</button>
+					</td>
+					</tr>
+			</table>
+		<script type="text/javascript">
+		function abc(){
+		event.preventDefault();
+		var student={};
+		var name = document.getElementById("name");
+		var roll= document.getElementById("rno");
+		var add=document.getElementById("address");
+		array={"name":name.value,"roll no":rno.value,"address":add.value};
+		console.log(JSON.stringify(array));
+		console.log(array);
+
+		}
+		
+		/*function abc(){
+			event.preventDefault();
+			var student={};
+			var input=document.getElementsByTagName("input");
+			for(var i=0;i<input.length;i++)
+			{
+				var name=input[i].name;
+				student[name]=input[i].value;
+			}
+			console.log(student);
+			console.log(JSON.stringify(student));
+		}*/
+		</script>
+</body>
+</html>

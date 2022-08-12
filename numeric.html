@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text-Box Check</title>
+  <style type="text/css">
+	body{
+	background-color:#FFFFB7;
+	}
+	input{
+	text-align: center;
+	padding:5px 40px ;
+	
+	}
+	#submit{
+	text-align: center;
+	}
+	p{background-color: white;
+	}
+	</style>
+</head>
+<body>
+		
+		Enter your text : <input type="text" id="e1" onkeyup="abc()">
+		<p id="para"></p>
+		<script type="text/javascript">
+		function abc(){
+		var a =document.getElementById("e1").value;
+		var p=document.getElementById("para");
+		var alpha=/^[a-zA-Z]+$/i;
+		var num= /^[0-9]+$/;
+		for(var i=0;i<a.length;i++)
+		{
+			if(a.match(alpha))
+			{
+				p.innerHTML="IT IS AN ALPHABET";
+			}
+		if(a.match(num))
+			{
+			p.innerHTML="IT IS A NUMBER";
+			}
+		}
+		}
+		</script>
+</body>
+</html>

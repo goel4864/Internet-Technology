@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>DIGITAL CLOCK</title>
+<style type="text/css">
+	
+div{
+	background-color: black;
+	color: white;
+	font-size: 80px;
+	font-family: sans-serif;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center; 
+	width":200px;
+	height:100px;
+	border-radius: 15px;
+}
+
+
+</style>
+</head>
+<body>
+	<div id="clock"></div>
+	<script type="text/javascript">
+		setInterval(clk,1000);
+		function clk()
+		{
+			var d = new Date();
+			var hr = d.getHours();
+			var min = d.getMinutes();
+			var sec = d.getSeconds();
+			var time=" Am";
+			if(hr >=12){
+				hr = hr -12;
+				time = "  PM ";
+			}
+			if (hr == 0){
+				 hr = 12
+				};
+
+			hr=addZero(hr);
+			min=addZero(min);
+			sec=addZero(sec);
+
+			var timer = hr + ":" + min +":"+sec + time;
+			document.getElementById("clock").innerHTML=timer;
+		}
+		function addZero(i){
+			if(i<10){i='0'+i};
+			return i;
+		}
+		clk();
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PRACTICAL -7</title>
+</head>
+<body>
+<button id="btn1" onclick="display()">CLICK</button>
+<p id="1"></p>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	var txt=document.getElementById("1");
+	function display()
+	{
+		var ourRequest=new XMLHttpRequest();
+		//ourRequest.open('GET','https://github.com/akanksha-goel/it_prac/blob/main/pet.json');
+		ourRequest.open('GET','pet.json');
+		ourRequest.onload=function()
+		{
+			var data=JSON.parse(ourRequest.responseText);
+			renderHTML(data);
+		};
+		ourRequest.send();
+	};
+	function renderHTML(dta){
+		var string="";
+		for (var i = 0; i <dta.length; i++){
+			string += "<p>"+ dta[i].name + "is a" + dta[i].age + "years old" + dta[i].type + "that likes to eat " + dta[i].thing + "," + dta[i].name + 
+			"weighs"+dta[i].weight;
+			string += '.</p>';
+		}
+
+	}
+	
+</script>
+</body>
+</html>

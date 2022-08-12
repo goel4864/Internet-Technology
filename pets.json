@@ -1,0 +1,6 @@
+[
+	{"name": "Jack", "age": "1", "weight": "3", "type": "dog", "thing": "bone"},
+ 	{ "name": "Jaguar", "age": "3", "weight": "10", "type": "cat", "thing": "flesh"},
+    {"name": "Mac", "age": "6", "weight": "0.8", "type": "bird", "thing": "chillies"},
+    {"name":"Tom","age":"2","weight":"5","type":"cat","thing":"biscuit"}
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT PRACTICAL-6</title>
+  <style type="text/css">
+	body{
+	background-color:#FFFFB7;
+	}
+	h1{
+	text-align: center;
+	text-decoration:underline;
+	}
+	input{
+	text-align: center;
+	padding:5px 40px ;
+	
+	}
+	#submit{
+	text-align: center;
+	}
+  </style>
+</head>
+<body>
+	Enter expression :<input type="text" id="1" >
+	<button onclick="abc()">EVALUATE</button>
+	Result :<textarea id ="2" readonly></textarea>
+  
+  <script type="text/javascript">
+		
+		function abc(){
+		event.preventDefault();
+		var a=document.getElementById("1").value;
+		var b=document.getElementById("2");
+		var evalute=eval(a);
+		b.innerHTML=evalute;
+		}
+
+		</script>
+</body>
+
+
+
+
+
+
+
+<!-- <body>
+<form>
+		<table>
+					<tr>
+						<td><label for=" name"> EMPLOYEE NAME</label></td>
+						<td><input type="text" id="name" name="name" ></td>
+					</tr>
+					<tr>
+						<td><label for="a">ID</label></td>
+						<td><input type="text" id="a" name="a"></td>
+					</tr>
+					<tr>
+					<td>
+					<button type="submit" onclick="abc()">SUBMIT</button>
+					</td>
+					</tr>
+			</table>
+		</form>
+		
+		<script type="text/javascript">
+		
+		function abc(){
+		event.preventDefault();
+		var inputs=document.getElementsByTagName("input")
+		for(var i=0;i<inputs.length;i++)
+		{
+			if(inputs[i].value.length==0)
+			{
+				inputs[i].focus();
+			}
+		}
+		}
+
+		</script>
+</body> -->
+

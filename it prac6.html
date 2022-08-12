@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT PRACTICAL-6</title>
+  <style type="text/css">
+	body{
+	background-color:#FFFFB7;
+	}
+	h1{
+	text-align: center;
+	text-decoration:underline;
+	}
+	input{
+	text-align: center;
+	padding:5px 40px ;
+	
+	}
+	#submit{
+	text-align: center;
+	}
+  </style>
+</head>
+<body>z
+<fieldset>
+    <h1 align="center" >PET'S FORM</h1>
+		<table>
+					<tr>
+						<td><label for=" name"> NAME</label></td>
+						<td><input type="text" id="name" name="name" ></td>
+					</tr>
+					<tr>
+						<td><label for="age">AGE</label></td>
+						<td><input type="number" id="age" name="age" min="0"></td>
+					</tr>
+					<tr>
+						<td><label for=" wgt">WEIGHT(in kgs)</label></td>
+						<td><input type="number" id="wgt" name="wgt" min="0"></td>
+					</tr>
+					<tr>
+						<td><label for="ty" >TYPE</label></td>
+						<td><input type="text" id="ty" name="ty"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="thing">LIKELY THING</label></td>
+						<td><input type="text" id="thing" name="thing"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+					<td>
+					<button type="submit" onclick="abc()" id="submit">SUBMIT</button>
+					</td>
+					</tr>
+			</table>
+		</fieldset>
+		
+		<script type="text/javascript">
+		
+		function abc(){
+		event.preventDefault();
+		var array={};
+		var name = document.getElementById("name");
+		var age= document.getElementById("age");
+		var weight=document.getElementById("wgt");
+		var t=document.getElementById("ty");
+		var thing=document.getElementById("thing");
+		array={"name":name.value,"age":age.value,"weight":weight.value,"type":t.value,"thing":thing.value};
+		console.log(JSON.stringify(array));
+		console.log(array);
+		}
+		</script>
+</body>
+</html>

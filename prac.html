@@ -1,0 +1,19 @@
+<html>
+<head><title>practice</title>
+</head>
+<body>
+
+<div id="pane1"></div>
+<script>
+var para =document.body.createElement("p");
+text=document.createTextNode("New Paragraph");
+para.appendChild(text);
+
+var att=document.createAttribute("align"):
+att.nodeValue="center";
+para.setAttributeNode(att);
+document.getElementById("pane1").appendChild(para);
+</script>
+
+</body>
+</html>

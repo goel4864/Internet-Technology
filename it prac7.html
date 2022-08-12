@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PRACTICAL -7</title>
+	<style type="text/css">
+		button{
+		background-color: black;
+		color: white;
+		padding: 8px ;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div id="1"></div>
+<button id="btn1">CLICK</button>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+	var txt=document.getElementById("1");
+	document.getElementById("btn1").addEventListener('click',display);
+	function display()
+	{
+		var ourRequest=new XMLHttpRequest();
+		ourRequest.open('GET','pets.json',true);
+		ourRequest.onload=function()
+		{
+			var data=JSON.parse(ourRequest.responseText);
+			renderHTML(data);
+		};
+		ourRequest.send();
+	}
+	function renderHTML(data){
+
+		for (var i = 0; i <data.length; i++){
+		txt.innerHTML+="<p>"+ data[i].name + " is a " + data[i].type +" whose age is "+ data[i].age + " and weight is " +data[i].weight
+		+ " kg likes to eat. " + data[i].thing ;
+			//string += '.</p>';
+		}
+
+	}
+	
+</script>
+</body>
+</html>
